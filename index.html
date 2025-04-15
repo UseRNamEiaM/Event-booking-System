@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Booking System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+  <link href="fullcalendar/main.min.css" rel="stylesheet" />
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-calendar-alt"></i> Event Booking System</h1>
+  </header>
+
+  <main class="main-container">
+    <!-- Calendar -->
+    <div id="calendar-container">
+      <h2>Select a Date</h2>
+      <div id="calendar"></div>
+    </div>
+
+   <!-- Form & Events  -->
+    <div class="content-container">
+      <!-- Booking Form -->
+      <section class="form-section fade-in">
+        <h2><i class="fas fa-edit"></i> Book an Event</h2>
+        <form id="bookingForm">
+          <input type="text" id="name" placeholder="Your Name" required >
+          <input type="email" id="email" placeholder="Email Address" required >
+          <input type="tel" id="phone" placeholder="Contact Number" required >
+          <input type="text" id="selectedDate" placeholder="Select Date" readonly required />
+          <select id="eventType" required>
+            <option value="">Event Type</option>
+            <option value="conference">Conference</option>
+            <option value="workshop">Workshop</option>
+            <option value="party">Party</option>
+          </select>
+          <input type="number" id="attendees" placeholder="Attendees" min="1" required />
+          <button type="submit" id="submit">Submit</button>
+        </form>
+        <p id="confirmation" class="hidden">✅ Booking submitted successfully!</p>
+      </section>
+
+      <!-- Event List -->
+      <section class="event-list fade-in">
+        <h2><i class="fas fa-calendar-check"></i> Upcoming Events</h2>
+        <div class="event-item" data-date="2025-04-20">
+          <strong>Web Dev Conference</strong><br>April 20, 2025 — New York
+        </div>
+        <div class="event-item" data-date="2025-04-21">
+          <strong>JavaScript Workshop</strong><br>April 21, 2025 — Online
+        </div>
+        <div class="event-item" data-date="2025-04-22">
+          <strong>New Year Party</strong><br>April 22, 2025 — Los Angeles
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="fullcalendar/main.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

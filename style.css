@@ -1,0 +1,162 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f9fc;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: #00bcd4;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header i {
+  margin-right: 10px;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+#calendar-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  flex: 2;
+  min-width: 300px;
+}
+
+
+.fc .fc-daygrid-event {
+  background-color: #00bcd4 !important;
+  color: white !important;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 4px;
+}
+
+
+.form-section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(128, 237, 245);
+
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus,
+select:focus {
+  border-color: #00bcd4;
+  outline: none;
+}
+
+button {
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#submit {
+  width: 26vh;
+  height: 8vh;
+  border-radius: 20px;
+  background: linear-gradient(to left, #04b6e8, #81e1f7);
+
+}
+
+#submit:hover {
+  background: #0e0e0e;
+
+}
+
+.hidden {
+  display: none;
+}
+
+#confirmation {
+  color: green;
+  margin-top: 10px;
+}
+
+
+.event-list {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(166, 233, 238, 0.97);
+}
+
+.event-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #e0f7fa;
+  border-left: 5px solid #00bcd4;
+  border-radius: 5px;
+}
+
+#bookingForm input {
+  padding: 10px;
+  color: black;
+  background-color: #f5f5f5;
+
+
+}
+
+
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+}
