@@ -33,8 +33,6 @@ How It Works
 The calendar is dynamically generated based on the current month.
 Clicking on a booked date displays event details.
 
-Clicking on an available date opens the booking form.
-
 Submitted data displays a confirmation message (note: no backend included).
 
 A section below shows all events scheduled for the next month.
